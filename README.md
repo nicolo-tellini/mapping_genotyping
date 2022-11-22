@@ -18,12 +18,13 @@ Genomics pipelines
   - coverage stats: 
     - samtools depth<sup>1</sup> and datamash (mean,Q1,median,Q3,IQR)
     - [breadth of coverage](https://www.nature.com/articles/nrg3642#:~:text=The%20breadth%20of%20coverage%20is%20the%20percentage%20of%20target%20bases%20that%20have%20been%20sequenced%20for%20a%20given%20number%20of%20times.)<sup>2</sup> from 10 to 100 by 10;
-  - per-chromosome average data
+  - per-chromosome data (chromosome cov./whole-genome cov.)
    #### per-sample gVCF
   - bcftools [v.1.15.1](https://github.com/samtools/bcftools/releases/tag/1.15.1) (mpileup,call,view,annotate,merge) 
   - bgzip/tabix v.1.11 
   - PLINK [v1.90b6.21](https://manpages.ubuntu.com/manpages/jammy/man1/plink1.9.1.html)
    ####  Phylogeny
+   [BioNJ](https://academic-oup-com.insb.bib.cnrs.fr/mbe/article/14/7/685/1119804) phylogenetic tree. 
   - R (v.4.0.2) packages: 
     - SNPRelate [v.1.22.0](https://www.bioconductor.org/packages/release/bioc/html/SNPRelate.html)
     - gdsfmt [v.1.24.1](https://www.bioconductor.org/packages/release/bioc/html/gdsfmt.html)
