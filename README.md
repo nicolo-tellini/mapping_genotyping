@@ -18,7 +18,7 @@ Genomics pipelines
   - coverage stats: 
     - samtools depth<sup>1</sup> and datamash (mean,Q1,median,Q3,IQR)
     - [breadth of coverage](https://www.nature.com/articles/nrg3642#:~:text=The%20breadth%20of%20coverage%20is%20the%20percentage%20of%20target%20bases%20that%20have%20been%20sequenced%20for%20a%20given%20number%20of%20times.)<sup>2</sup> from 10 to 100 by 10;
-  - per-chromosome data (chromosome cov./whole-genome cov.)
+  - per-chromosome data (chromosome cov./whole-genome cov.) (better formalization FACS data + ControlFREEC?)
    #### per-sample gVCF
   - bcftools [v.1.15.1](https://github.com/samtools/bcftools/releases/tag/1.15.1) (mpileup,call,view,annotate,merge) 
   - bgzip/tabix v.1.11 
