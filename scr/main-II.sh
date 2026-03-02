@@ -3,6 +3,10 @@
 
 source ./config
 
+genome=$(find "$(realpath $basedir/rep)" -name "*.fa")
+ 
+ref=$(echo $genome | rev | cut -d"/" -f1 | rev | cut -d"." -f1)
+
 cd $gvcfstatdir
 
 # Initialize empty summary files (will be regenerated below)
