@@ -7,3 +7,5 @@ mamba create -n mapping_calling \
     gawk=5.3.1 \
     parallel=20240722 \
     -c conda-forge -c bioconda
+
+### Config file and 
