@@ -1,6 +1,4 @@
 # SGRP5-genomics
-Genomics pipelines
-# mapping and calling 
 
 ## the env 
 ```
@@ -11,7 +9,7 @@ mamba create -n mapping_calling \
     parallel=20240722 \
     -c conda-forge -c bioconda
 ```
-## the Config file 
+## the config file 
 
 ```
 ###########################################################
@@ -23,13 +21,13 @@ mamba create -n mapping_calling \
 #                                                         #
 # Each parameter is explained briefly to guide            #
 # adjustments. Please refer to documentation if further   #
-# clarification is needed.				  #
-#                                			  #
-# Contact me at nicolo.tellini.2@gmail.com		  #
+# clarification is needed.				                  #
+#                                			              #
+# Contact me at nicolo.tellini.2@gmail.com		          #
 ###########################################################
 
 ##########################################################
-#		     USER VARIABLE			 #
+#		             USER VARIABLE	                     #
 ##########################################################
 
 # Number of threads for each parallel process		 
@@ -59,9 +57,8 @@ ref_pos_threshold=11000000
 ## Reference position threshold
 ## alt_homo_threshold=80000
 
-
 ##########################################################
-#	    DO NOT CHANGE THE VARIABLE BELOW         	 #
+#    	    DO NOT CHANGE THE VARIABLE BELOW         	 #
 ##########################################################
 
 basedir=$(dirname "$(pwd)")
@@ -78,4 +75,3 @@ nasdir="$basedir/nas"
 treedir="$basedir/tree"
 
 ```
-# bwa mapping
