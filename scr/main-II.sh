@@ -3,10 +3,6 @@
 
 source ./config
 
-genome=$(find "$(realpath $basedir/rep)" -name "*.fa")
- 
-ref=$(echo $genome | rev | cut -d"/" -f1 | rev | cut -d"." -f1)
-
 cd $gvcfstatdir
 
 # Initialize empty summary files (will be regenerated below)
@@ -44,7 +40,7 @@ ls $gvcfdir/batch_* | parallel -j 4 merge_gvcf
 
 wait
 # Merge all batch-level gVCFs into a final multi-sample gVCF
-bcftools merge $gvcfdir/batch_*gz -W -Oz1 -o $gvcfdir/allbatches.gvcf.gz --force-single
+bcftools merge $gvcfdir/batch_*gz -W -Oz1 -o $gvcfdir/allbatches.gvcf.gz
 
 wait
 
@@ -57,7 +53,7 @@ bcftools view -m2 -M2 -v snps -i 'F_MISSING=0' $gvcfdir/allbatches.gvcf.gz -Oz1 
 
 # Convert filtered VCF to FASTA alignment
 # -m 10000 controls maximum missing sites per sequence before exclusion
-vcf2phy -i $gvcfdir/allbatches.vcf.gz -p -f -m 10000 -o $gvcfdir/allbatches.fasta
+$basedir/scr/vcf2phylip.py -i $gvcfdir/allbatches.vcf.gz -p -f -m 10000 -o $gvcfdir/allbatches.fasta
 
 # Build a Neighbor-Joining tree for rapid population structure assessment
 # FastTree is used here for speed rather than maximum likelihood optimization
