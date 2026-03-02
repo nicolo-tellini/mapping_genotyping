@@ -53,7 +53,7 @@ bcftools view -m2 -M2 -v snps -i 'F_MISSING=0' $gvcfdir/allbatches.gvcf.gz -Oz1 
 
 # Convert filtered VCF to FASTA alignment
 # -m 10000 controls maximum missing sites per sequence before exclusion
-$basedir/scr/vcf2phylip.py -i $gvcfdir/allbatches.vcf.gz -p -f -m 10000 -o $gvcfdir/allbatches.fasta
+python3 $basedir/scr/vcf2phylip.py -i $gvcfdir/allbatches.vcf.gz -p -f -m 10000 -o $gvcfdir/allbatches.fasta
 
 # Build a Neighbor-Joining tree for rapid population structure assessment
 # FastTree is used here for speed rather than maximum likelihood optimization
