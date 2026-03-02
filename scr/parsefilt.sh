@@ -38,4 +38,4 @@ rm "$gvcfdir/head2_$ind" "$gvcfdir/head1_$ind"
 rm "$gvcfdir/head3_$ind" $gvcf_file $gvcf_file.csi
  
 ## gVCF filtering
-bcftools filter -e "STRLEN(REF) > 1 || STRLEN(ALT) > 1" "$gbcf_file" | bcftools filter -e "FORMAT/DP < ${minDP} || QUAL < ${minQUAL}" --set-GTs . |  bcftools annotate -x ID,INFO,FILTER -W -Oz -o "$filt_gvcf_file"
+bcftools filter -e "STRLEN(REF) > 1 || STRLEN(ALT) > 1" "$gbcf_file" | bcftools filter -e "QUAL < ${minQUAL}" --set-GTs . |  bcftools annotate -x ID,INFO,FILTER -W -Oz -o "$filt_gvcf_file"
