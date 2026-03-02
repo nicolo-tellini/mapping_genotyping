@@ -78,12 +78,6 @@ treedir="$basedir/tree"
 ## dir tree
 ```
 .
-├── cps
-├── gVCF
-├── map
 ├── rep
 ├── scr
-├── seq
-├── stat
-├── tmp
 ```
