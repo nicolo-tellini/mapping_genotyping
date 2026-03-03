@@ -8,6 +8,9 @@ mamba create -n mapping_calling \
     gawk=5.3.1 \
     bcftools=1.20 \
     parallel=20240722 \
+    plink2=2.0.0a.6.9 \
+    iqtree=2.4.0 \
+    pixy=2.0.0.beta14 \
     fasttree=2.2.0 \
     -c conda-forge -c bioconda
 ```
