@@ -29,3 +29,5 @@ Be sure ```vcf2phylip.py``` is in scr and you can execute it.
 Main part I run with bash. 
 
 Main part II and III need to be run manually, interventinons and parameters tuning might be required. 
+
+popGen.sh also requires manul run and flags adjusted according to the population
