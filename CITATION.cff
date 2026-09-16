@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "mapping_genotyping"
+authors:
+  - family-names: Tellini
+    given-names: Nicolò
+    orcid: "https://orcid.org/0000-0002-2406-2906"
+    affiliation: "University of Oslo"
+version: 1.0.0
+date-released: 2026-09-16
+url: "https://github.com/nicolo-tellini/mapping_genotyping"
+license: MIT
